@@ -1,68 +1,39 @@
 import React from 'react'
+// import { HashRouter as Router, Route} from react-router-dom
+// import Bracket from './Bracket'
+import Players from './Players'
+import Bracket from './Bracket'
 
-const App = () => {
-  return (
-    <div>
-      <div className="hero-image">
-        <div className="hero-text">
-          <h3>Bridey's</h3>
-          <h1>Mario Kart Tournament</h1>
-        </div>
-      </div>
+// const App = () => {
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { bracketComponent: false }
+  }
 
-      <div className="name-form-container">
-        <form className="nameForm" action="yeet">
-          <ul>
-            <li>
-              <label>Player 1</label>
-              <input type="text" name="name" maxLength="100" />
-              <span>What's your name?</span>
-            </li>
-            <li>
-              <label>Player 2</label>
-              <input type="text" name="name" maxLength="100" />
-              <span>What's your name?</span>
-            </li>
-            <li>
-              <label>Player 3</label>
-              <input type="text" name="name" maxLength="100" />
-              <span>What's your name?</span>
-            </li>
-            <li>
-              <label>Player 4</label>
-              <input type="text" name="name" maxLength="100" />
-              <span>What's your name?</span>
-            </li>
-            <li>
-              <label>Player 5</label>
-              <input type="text" name="name" maxLength="100" />
-              <span>What's your name?</span>
-            </li>
-            <li>
-              <label>Player 6</label>
-              <input type="text" name="name" maxLength="100" />
-              <span>What's your name?</span>
-            </li>
-            <li>
-              <label>Player 7</label>
-              <input type="text" name="name" maxLength="100" />
-              <span>What's your name?</span>
-            </li>
-            <li>
-              <label>Player 8</label>
-              <input type="text" name="name" maxLength="100" />
-              <span>What's your name?</span>
-            </li>
-          </ul>
-          <br />
-          <div className="button-div">
-            <input type="submit" value="Race!" />
+  // showBracket () {
+  //   set state :
+  //   bracket: true
+  // }
+
+  render() {
+    return (
+      // {this.state.bracketComponent == true && <Bracket/>}
+        <div>
+          <div className="hero-image">
+            <div className="hero-text">
+              <h3>Bridey's</h3>
+              <h1>Mario Kart Tournament</h1>
+            </div>
           </div>
-        </form>
-      </div>
-    </div>
+          <div>
+            {this.state.bracketComponent ? <Bracket />: <Players /> }
+          </div>
+        </div>
 
-  )
+// button on click (showbracket)
+    )
+  }
 }
 
 export default App
