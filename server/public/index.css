@@ -28,17 +28,40 @@ body, html {
 .player {
   padding: 0px 5px;
   margin: 3px 0;
-  height: 25px;
+  height: 30px;
   line-height: 25px;
   white-space: nowrap;
   overflow: hidden;
-  position: relative;
+	position: relative;
+	color: #EAEDED;
+	width: 60%;
+	font-family: 'Muli', sans-serif;
 }
 
 .player-top {
   background-color: #4D5656;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  opacity: 1;
+	opacity: 1;
+	font-family: 'Muli', sans-serif;
+}
+
+.player-bottom {
+  background-color: #4D5656;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+	opacity: 1;
+	font-family: 'Muli', sans-serif;
+}
+
+.round-names {
+	font-family: 'Muli', sans-serif;
+	font-size: 20px;
+}
+
+.round1-wrapper {
+	text-align: center;
+	width: 300px;
+	box-align: center;
+	align-content: center;
 }
 
 .nameForm {
