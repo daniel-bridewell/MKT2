@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Players = () => {
+const Players = (props) => {
   return (
     
     <div className="name-form-container">
@@ -49,7 +49,7 @@ const Players = () => {
         </ul>
         <br />
         <div className="button-div">
-          <input type="submit" value="Race!" />
+          <input type="submit" value="Race!" onClick={props.showBracket}/>
         </div>
       </form>
     </div>

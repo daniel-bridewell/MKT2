@@ -9,12 +9,12 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = { bracketComponent: false }
+    this.showBracket = this.showBracket.bind(this)
   }
 
-  // showBracket () {
-  //   set state :
-  //   bracket: true
-  // }
+  showBracket () {
+    this.setState({ bracketComponent: true })
+  }
 
   render() {
     return (
@@ -27,7 +27,7 @@ class App extends React.Component {
             </div>
           </div>
           <div>
-            {this.state.bracketComponent ? <Bracket />: <Players /> }
+            {this.state.bracketComponent ? <Bracket />: <Players  showBracket={this.showBracket}/> }
           </div>
         </div>
 
