@@ -21,10 +21,10 @@ class App extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.showBracket = this.showBracket.bind(this)
+    this.testClick = this.testClick.bind(this)
   }
 
   showBracket () {
-    console.log(this.state)
     this.setState({ bracketComponent: true })
   }
 
@@ -32,6 +32,10 @@ class App extends React.Component {
     this.setState({
       [event.target.name]: event.target.value,
     })
+  }
+
+  testClick() {
+    console.log('clicked')
   }
 
   render() {
