@@ -8,12 +8,30 @@ import Bracket from './Bracket'
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { bracketComponent: false }
+    this.state = { 
+      bracketComponent: false,
+      player1: "",
+      player2: "",
+      player3: "",
+      player4: "",
+      player5: "",
+      player6: "",
+      player7: "",
+      player8: "",
+    }
+    this.handleChange = this.handleChange.bind(this)
     this.showBracket = this.showBracket.bind(this)
   }
 
   showBracket () {
+    console.log(this.state)
     this.setState({ bracketComponent: true })
+  }
+
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
   }
 
   render() {
@@ -27,7 +45,7 @@ class App extends React.Component {
             </div>
           </div>
           <div>
-            {this.state.bracketComponent ? <Bracket />: <Players  showBracket={this.showBracket}/> }
+            {this.state.bracketComponent ? <Bracket state={this.state}/>: <Players  updatePlayers={this.handleChange} showBracket={this.showBracket}/> }
           </div>
         </div>
 

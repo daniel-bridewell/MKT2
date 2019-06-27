@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Bracket = () => {
+const Bracket = (props) => {
+
+    console.log(props, props.state)
 
   return (
   <div className="center-all">
@@ -12,20 +14,20 @@ const Bracket = () => {
         <div className="round round-one current">
             <div className="round-details">Round 1<br/><span className="date">Welcome!</span></div>
             <ul className="matchup">
-                <li className="team team-top">placeholder</li>
-                <li className="team team-bottom">placeholder</li>
+                <li className="team team-top">{props.state.player1}</li>
+                <li className="team team-bottom">{props.state.player2}</li>
             </ul>
             <ul className="matchup">
-                <li className="team team-top">placeholder</li>
-                <li className="team team-bottom">placeholder</li>
+                <li className="team team-top">{props.state.player3}</li>
+                <li className="team team-bottom">{props.state.player4}</li>
             </ul>
             <ul className="matchup">
-                <li className="team team-top">placeholder</li>
-                <li className="team team-bottom">placeholder</li>
+                <li className="team team-top">{props.state.player5}</li>
+                <li className="team team-bottom">{props.state.player6}</li>
             </ul>
             <ul className="matchup">
-                <li className="team team-top">placeholder</li>
-                <li className="team team-bottom">placeholder</li>
+                <li className="team team-top">{props.state.player7}</li>
+                <li className="team team-bottom">{props.state.player8}</li>
             </ul>                                               
         </div>
 
