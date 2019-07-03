@@ -25,6 +25,7 @@ class App extends React.Component {
       finalist1: [],
       finalist2: [],
       winner: [],
+      winnerComponent: false,
     }
     this.handleChange = this.handleChange.bind(this)
     this.showBracket = this.showBracket.bind(this)
@@ -33,7 +34,8 @@ class App extends React.Component {
     this.round1Winner3 = this.round1Winner3.bind(this)
     this.round1Winner4 = this.round1Winner4.bind(this)
     this.round2Winner1 = this.round2Winner1.bind(this)
-    this.round2winner2 = this.round2Winner2.bind(this)
+    this.round2Winner2 = this.round2Winner2.bind(this)
+    this.mktWinner = this.mktWinner.bind(this)
   }
 
   showBracket () {
@@ -86,6 +88,12 @@ class App extends React.Component {
     })
   }
 
+  mktWinner(event) {
+    this.setState({
+      winner: event.target.textContent,
+    })
+  }
+
   render() {
     return (
       // {this.state.bracketComponent == true && <Bracket/>}
@@ -98,7 +106,7 @@ class App extends React.Component {
             </div>
           </div>
           <div>
-            {this.state.bracketComponent ? <Bracket state={this.state} round1Winner1={this.round1Winner1} round1Winner2={this.round1Winner2} round1Winner3={this.round1Winner3} round1Winner4={this.round1Winner4} round2Winner1={this.round2Winner1} round2Winner2={this.round2Winner2}/>: <Players  updatePlayers={this.handleChange} showBracket={this.showBracket}/> }
+            {this.state.bracketComponent ? <Bracket state={this.state} round1Winner1={this.round1Winner1} round1Winner2={this.round1Winner2} round1Winner3={this.round1Winner3} round1Winner4={this.round1Winner4} round2Winner1={this.round2Winner1} round2Winner2={this.round2Winner2} mktWinner={this.mktWinner}/>: <Players  updatePlayers={this.handleChange} showBracket={this.showBracket}/> }
           </div>
         </div>
 

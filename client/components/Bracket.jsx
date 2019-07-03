@@ -1,4 +1,5 @@
 import React from 'react'
+import { thisExpression } from '@babel/types';
 
 const Bracket = (props) => {
 
@@ -44,14 +45,18 @@ const Bracket = (props) => {
         <div className="round round-three current">
             <div className="round-details">Finals<br/><span className="date">Congrats!</span></div>         
             <ul className="matchup">
-                <li className="team team-top" onClick={props.round1Winner1}>{props.state.finalist1}</li>
-                <li className="team team-bottom" onClick={props.round1Winner1}>{props.state.finalist2}</li>
+                <li className="team team-top" onClick={props.mktWinner}>{props.state.finalist1}</li>
+                <li className="team team-bottom" onClick={props.mktWinner}>{props.state.finalist2}</li>
             </ul>                                       
         </div>    
     </div>
   </div>
   </section>
+  <div>
+      Congrats to {props.state.winner}!!
   </div>
+  </div>
+  
   )
 }
 
