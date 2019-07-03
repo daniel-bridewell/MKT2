@@ -3,11 +3,19 @@ body, html {
   background-color: #EAEDED;
 }
 
+.center-logo {
+	position: absolute;
+	margin: auto;
+}
+
 .center-all {
 	text-align: center;
-	align-content: center;
-	box-align: center;
-	align-items: center;
+}
+
+.logo {
+	position: relative;
+	text-align: center;
+	/* background-image: url("/images/MKThero.png") */
 }
 
 .hero-image {
@@ -371,7 +379,6 @@ body {
 }
 .final {
 	margin: 4.5em 0;}
-
 
 .date {
 	font-size: 10px;
